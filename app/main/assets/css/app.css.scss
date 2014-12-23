@@ -1,0 +1,26 @@
+tr.disabled {
+  background-color: #eee;
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+td.from-default {
+  color: #bbb;
+}
+
+//td.users-path {
+//  border-top: 1px solid    rgb(252, 248, 227);
+//  border-bottom: 1px solid rgb(252, 248, 227);
+//}
+
+//.path-table tr .users-path:first-child {
+//  border-left: 1px solid #000;
+//}
+//
+//.path-table tr .users-path:last-child {
+//  border-right: 1px solid #000;
+//}
+
+table.path-table {
+   border-collapse: separate;
+}
