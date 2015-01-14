@@ -2,6 +2,7 @@
 class MainController < Volt::ModelController
   def index
     # Add code for when the index view is loaded
+    page._start_path = 'main/main/path_display'
   end
 
   def about
@@ -22,7 +23,7 @@ class MainController < Volt::ModelController
   end
 
   def match_parts
-    view_lookup = Volt::ViewLookupForPath.new($page, 'main/main/path_display')
+    view_lookup = Volt::ViewLookupForPath.new($page, page._start_path.or('main/main/path_display'))
 
     parts = path_parts
     parts_size = parts.size
