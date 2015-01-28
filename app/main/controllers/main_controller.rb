@@ -10,15 +10,15 @@ class MainController < Volt::ModelController
   end
 
   def path_parts
-    page._path.or('missing').split('/')
+    page._the_path.or('missing').split('/')
   end
 
   def preview_path
-    check_path = page._path.or('').gsub(/\/$/, '')
+    check_path = page._the_path.or('').gsub(/\/$/, '')
     if ['main/main', 'main'].include?(check_path)
       return 'missing'
     else
-      return page._path
+      return page._the_path
     end
   end
 
@@ -32,7 +32,7 @@ class MainController < Volt::ModelController
 
     default_parts = ['main', 'main', 'index', 'body']
 
-    match_path, _ = view_lookup.path_for_template(page._path.or('missing'))
+    match_path, _ = view_lookup.path_for_template(page._the_path.or('missing'))
 
     matched_a_path = false
 
