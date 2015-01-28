@@ -1,6 +1,3 @@
 # Routing and Rendering
 
-1. Template bindings
-2. Reactivity
-3. Params
-4. Routes
+See this video for more information: https://www.youtube.com/watch?v=1yNMP3XR6jU
